@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json
+# See https://docs.coderabbit.ai/reference/yaml-template for defaults
+
+language: en-US
+reviews:
+  high_level_summary: false
+  sequence_diagrams: false
+  poem: false
+  disable_cache: true
+  auto_review:
+    drafts: true
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
+  tools:
+    actionlint:
+      enabled: true
+    biome:
+      enabled: false
+    brakeman:
+      enabled: false
+    buf:
+      enabled: true
+    checkmake:
+      enabled: true
+    checkov:
+      enabled: false
+    circleci:
+      enabled: false
+    clippy:
+      enabled: false
+    cppcheck:
+      enabled: true
+    detekt:
+      enabled: false
+    dotenvLint:
+      enabled: true
+    eslint:
+      enabled: false
+    flake8:
+      enabled: false
+    gitleaks:
+      enabled: true
+    golangci-lint:
+      enabled: false
+    hadolint:
+      enabled: false
+    htmlhint:
+      enabled: false
+    languagetool:
+      level: picky
+    luacheck:
+      enabled: true
+    markdownlint:
+      enabled: true
+    oxc:
+      enabled: false
+    phpcs:
+      enabled: false
+    phpmd:
+      enabled: false
+    phpstan:
+      enabled: false
+    pmd:
+      enabled: true
+      #config_file: ""
+    prismaLint:
+      enabled: false
+    pylint:
+      enabled: false
+    regal:
+      enabled: false
+    rubocop:
+      enabled: false
+    ruff:
+      enabled: false
+    semgrep:
+      enabled: true
+      #config_file: ""
+    shellcheck:
+      enabled: false
+    shopifyThemeCheck:
+      enabled: false
+    sqlfluff:
+      enabled: false
+    swiftlint:
+      enabled: false
+    yamllint:
+      enabled: true
+knowledge_base:
+  opt_out: true
+  web_search:
+    enabled: false
+  pull_requests:
+    scope: auto
+code_generation:
+  unit_tests:
+    path_instructions:
+      - path: "**/*.java"
+        instructions: "use assertj for assertions"
