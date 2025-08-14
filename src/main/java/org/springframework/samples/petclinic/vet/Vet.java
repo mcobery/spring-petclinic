@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.vet;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashSet;
@@ -60,9 +61,14 @@ public class Vet extends Person {
 
 	@XmlElement
 	public List<Specialty> getSpecialties() {
-		return getSpecialtiesInternal().stream()
-			.sorted(Comparator.comparing(NamedEntity::getName))
-			.collect(Collectors.toList());
+		List<Specialty> specialtiesList = new ArrayList<>();
+		for (Specialty specialty : specialties) {
+			specialtiesList.add(specialty);
+		}
+		return specialtiesList;
+//		return getSpecialtiesInternal().stream()
+//			.sorted(Comparator.comparing(NamedEntity::getName))
+//			.collect(Collectors.toList());
 	}
 
 	public int getNrOfSpecialties() {
