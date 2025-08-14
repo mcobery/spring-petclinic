@@ -73,6 +73,7 @@ class PetController {
 			@PathVariable(name = "petId", required = false) Integer petId) {
 
 		if (petId == null) {
+			System.out.println("No pet ID provided");
 			return new Pet();
 		}
 

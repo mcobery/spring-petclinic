@@ -60,8 +60,8 @@ class MySqlIntegrationTests {
 
 	@Test
 	void testFindAll() {
-		vets.findAll();
-		vets.findAll(); // served from cache
+		vets.getAllVetsCollection();
+		vets.getAllVetsCollection(); // served from cache
 	}
 
 	@Test
